@@ -10,8 +10,8 @@ BlazeComponent.extendComponent({
     this.isBoardReady = new ReactiveVar(false);
 
     // The pattern we use to manually handle data loading is described here:
-    // https://kadira.io/academy/meteor-routing-guide/content/subscriptions-and-data-management/using-subs-manager
-    // XXX The boardId should be readed from some sort the component "props",
+    // https://web.archive.org/web/20170518121517/https://old.kadira.io/academy/meteor-routing-guide/content/subscriptions-and-data-management/using-subs-manager
+    // XXX The boardId should be read from some sort the component "props",
     // unfortunatly, Blaze doesn't have this notion.
     this.autorun(() => {
       const currentBoardId = Session.get('currentBoard');
