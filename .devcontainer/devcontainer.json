@@ -19,7 +19,6 @@
         "redhat.vscode-yaml",
         "vuhrmeister.vscode-meteor"
       ]
-    },
-    "appPort": 27017
+    }
   }
 }
