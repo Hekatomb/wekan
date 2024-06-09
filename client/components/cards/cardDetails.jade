@@ -715,11 +715,10 @@ template(name="cardDetailsActionsPopup")
           i.fa.fa-link
           | {{_ 'cardMorePopup-title'}}
 
-template(name="exportCardPopup")
+template(name="exportCard")
   ul.pop-over-list
     li
-      a(href="{{exportUrlCardPDF}}",, download="{{exportFilenameCardPDF}}")
-        i.fa.fa-share-alt
+      a(href="{{exportUrlCardPDF}}" download="{{exportFilenameCardPDF}}")
         | {{_ 'export-card-pdf'}}
 
 template(name="moveCardPopup")

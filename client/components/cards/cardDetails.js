@@ -344,6 +344,7 @@ BlazeComponent.extendComponent({
         'click .js-go-to-linked-card'() {
           Utils.goCardId(this.data().linkedId);
         },
+        'click .js-export-card': Popup.open('exportCard'),
         'click .js-member': Popup.open('cardMember'),
         'click .js-add-members': Popup.open('cardMembers'),
         'click .js-assignee': Popup.open('cardAssignee'),
