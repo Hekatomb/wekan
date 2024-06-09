@@ -153,7 +153,8 @@ ENV \
     ORACLE_OIM_ENABLED=false \
     WAIT_SPINNER="" \
     WRITABLE_PATH=/data \
-    S3=""
+    S3="" \
+    SERVER_NODE_OPTIONS="--inspect"
 
 #   NODE_OPTIONS="--max_old_space_size=4096"
 
