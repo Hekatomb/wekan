@@ -32,8 +32,8 @@ runOnServer(function() {
    */
   Picker.route('/api/boards/:boardId/lists/:listId/cards/:cardId/exportPDF', function (params, req, res) {
     const boardId = params.boardId;
-    const paramListId = req.params.listId;
-    const paramCardId = req.params.cardId;
+    const paramListId = params.listId;
+    const paramCardId = params.cardId;
     let user = null;
     let impersonateDone = false;
     let adminId = null;

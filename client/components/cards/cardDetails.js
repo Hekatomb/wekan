@@ -510,8 +510,8 @@ BlazeComponent.extendComponent({
   exportUrlCardPDF() {
     const params = {
       boardId: Session.get('currentBoard'),
-      listId: this.listId,
-      cardId: this.cardId,
+      listId: this.data().listId,
+      cardId: Utils.getCurrentCardId(),
     };
     const queryParams = {
       authToken: Accounts._storedLoginToken(),

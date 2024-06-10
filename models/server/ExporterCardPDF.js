@@ -1,6 +1,7 @@
 import { ReactiveCache } from '/imports/reactiveCache';
 // exporter maybe is broken since Gridfs introduced, add fs and path
 import { createWorkbook } from './createWorkbook';
+import { TAPi18n } from '/imports/i18n';
 
 class ExporterCardPDF {
   constructor(boardId) {
@@ -9,11 +10,11 @@ class ExporterCardPDF {
 
   build(res) {
 
-    /*
+        const http = Npm.require('http');
         const fs = Npm.require('fs');
         const os = Npm.require('os');
         const path = Npm.require('path');
-
+    
         const byBoard = {
           boardId: this._boardId,
         };
@@ -607,17 +608,17 @@ class ExporterCardPDF {
           };
         }
         workbook.xlsx.write(res).then(function () {});
-        */
-
+        return;
+    
     var doc = new PDFDocument({size: 'A4', margin: 50});
     doc.fontSize(12);
     doc.text('Some test text', 10, 30, {align: 'center', width: 200});
-    this.response.writeHead(200, {
+   res.writeHead(200, {
       'Content-type': 'application/pdf',
       'Content-Disposition': "attachment; filename=test.pdf"
     });
-    this.response.end( doc.outputSync() );
-
+    res.end( doc.outputSync() );
+    
   }
 
   canExport(user) {
